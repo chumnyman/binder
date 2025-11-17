@@ -1,0 +1,15 @@
+# Rojo generated files
+sourcemap.json
+
+# Roblox Studio files
+*.rbxl
+*.rbxlx
+*.rbxm
+*.rbxmx
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VSCode workspace settings
+.vscode/

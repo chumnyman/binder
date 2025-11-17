@@ -1,0 +1,9 @@
+{
+  "name": "binder",
+  "tree": {
+    "$className": "Folder",
+    "binder": {
+      "$path": "src"
+    }
+  }
+}
