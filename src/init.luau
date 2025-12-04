@@ -14,7 +14,7 @@
 	modification is happening to '_connected', the 'Binder' just reads it for info.
 
 	'Binder' is provided under the MIT License
-	V1.0.0 - September 6, 2025
+	V1.0.1 - November 16, 2025
 ]]
 -- IMPORTS --
 local GroupHandle = require(script.Handles.GroupHandle)
