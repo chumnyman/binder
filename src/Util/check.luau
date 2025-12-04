@@ -5,7 +5,6 @@
 
 	Util module with functions for checking anything that the 'Binder' implementation requires.
 	For example, 'Connection' objects need a .Connected or ._connected property, and a :Disconnect() method.
-	Uses caching for maximum performance when detecting connection property types.
 ]]
 local Types = require(script.Parent.Parent.Types)
 
@@ -15,18 +14,6 @@ local function isCallable(value)
 	end
     return false
 end
-
--- Gets the connection property name for a __pure__ connection object
-local function getConnectionProperty(conLike)
-	local prop
-	if rawget(conLike, "Connected") then
-		prop = "Connected"
-	elseif rawget(conLike, "_connected") then
-		prop = "_connected"
-	end
-	return prop
-end
-
 
 -- validates if an object implements the 'ConnectionLike' interface
 local function isValidConLike(conLike: Types.ConnectionLike)
@@ -67,6 +54,5 @@ return {
 	isCallable = isCallable,
 	isConnected = isConnected,
 	isValidConLike = isValidConLike,
-	isValidGroupHandle = isValidGroupHandle,
-	getConnectionProperty = getConnectionProperty
+	isValidGroupHandle = isValidGroupHandle
 }
